@@ -157,6 +157,20 @@ img {
 }
 
 .hero {
+	height: 600px;
+	max-width: 1600px;
+	margin: 0 auto;
+
+	background-image: linear-gradient(
+			to right,
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url(../images/hero-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
 	background-color: var(--hero-bg-color);
 	text-align: center;
 	padding-top: 200px;
@@ -208,6 +222,35 @@ img {
 
 .features .item {
 	flex-basis: calc((100% - 90px) / 4);
+}
+
+.features .item::before {
+	content: "";
+	display: block;
+	margin-bottom: 30px;
+	height: 120px;
+
+	background-color: var(--button-secondary-bg-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 70px;
+	border-radius: 4px;
+}
+
+.item.antenna::before {
+	background-image: url(../images/antenna.png);
+}
+
+.item.clock::before {
+	background-image: url(../images/clock.png);
+}
+
+.item.diagram::before {
+	background-image: url(../images/diagram.png);
+}
+
+.item.astronaut::before {
+	background-image: url(../images/astronaut.png);
 }
 
 .features-subtitle {
